@@ -8,7 +8,7 @@ export default class Counter extends Component {
   render() {
     return (
       <div className="counter">
-        <span>Todo</span>
+        <span>TODO</span>
         <span>
             {
                 (store.todosLength > 1) ? "s" : ""

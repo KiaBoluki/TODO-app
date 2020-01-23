@@ -22,10 +22,8 @@ class TodoItem extends Component {
     const { todo } = this.props;
 
     return (
-      <tr
-        
-      >
-        <td >
+      <tr>
+        <td>
           <label className={
           todo.completed ? this.state.comClass : this.state.notComClass
         }>
