@@ -1,11 +1,12 @@
-.container{
+.container {
   max-width: 500px;
- box-shadow: 1px 1px 3px grey;
- margin-top: 45px;
- padding:13px 15px;
+  width: 95% !important;
+  box-shadow: 1px 1px 3px grey;
+  margin-top: 45px;
+  padding: 13px 15px;
+  min-width: 350px;
+  padding-bottom: 2px;
 }
-
-
 
 input[type="checkbox"] {
   width: 0;
@@ -14,20 +15,18 @@ input[type="checkbox"] {
 }
 
 .todo-item {
-
   position: relative;
   display: block;
   box-sizing: border-box;
   padding-left: 25px;
   top: 0;
   left: 0;
-  
 }
 
 .checkmark {
   width: 20px;
   height: 20px;
-  background-color: rgb(3, 44, 107) !important;
+  background-color: rgb(75, 139, 45) !important;
   display: inline-block;
   position: absolute;
   vertical-align: middle;
@@ -37,51 +36,55 @@ input[type="checkbox"] {
   border-radius: 100%;
 }
 
-input[type="checkbox"]:checked ~ .checkmark::after{
-    content: '';
-    width: 10px;
-    height: 10px;
-    display: block;
-    background-color: #fff;
-    position: absolute;
-    border-radius: 100%;
-    left:5px;
-    top:5px;
+input[type="checkbox"]:checked ~ .checkmark::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 100%;
+  left: 5px;
+  top: 5px;
 }
 
-table{
-  
+table {
 }
 
-.desc{
-    
-    width:450px !important;
+.desc {
+  width: 450px !important;
 }
 
-.completed{
+.completed {
   color: grey;
   text-decoration: line-through;
 }
 
-
-.exit-btn{
+.exit-btn {
   width: 40px;
-  position: relative;  
-}
-
-.footer {
-  padding: 0px 0px 0px 0px;
-  overflow: auto;
-  border-top: 1px solid #aaa;
-}
-
-.counter , .filter-btns, .clr-btn{
-  float: left;
-  padding: 10px;
+  position: relative;
   
 }
 
-.header{
+.exit-btn i{
+  cursor: pointer;
+  color: #FF4A41;
+  margin-top: 5px;
+}
+
+.footer {
+  padding: 0px 0px 0px 0px ;
+  overflow: auto;
+  border-top: 1px dashed #aaa;
+}
+
+
+.filter-btns {
+  float: left;
+  padding: 10px 0px;
+}
+
+.header {
   overflow: visible;
   padding: 10px;
   margin: 0px;
@@ -91,7 +94,7 @@ table{
   float: left;
   width: 70px;
 }
-.header h1{
+.header h1 {
   padding: 0px !important;
   margin: 0px;
   overflow: hidden;
@@ -105,12 +108,22 @@ table{
   white-space: pre-line;
 }
 
-.table-hover tr:hover{
+.table-hover tr:hover {
   background-color: #eee;
 }
 
-.filter-btns a.btn-secondary{
-  color:#eee;
+.filter-btns a.btn-secondary {
+  color: #eee;
 }
 
+.filter-btns a:first-child {
+  margin-left: 0px;
+}
 
+.clr-btn{
+  float: right;
+  margin-top:10px;
+  color: maroon;
+  cursor: pointer;
+  padding-right: 15px;
+}

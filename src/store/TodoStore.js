@@ -35,6 +35,12 @@ class TodoStore {
 
   }
 
+  @action
+  clearTodos(){
+    //this.todos.splice(0,this.todos.length) // clear the array 
+    this.todos = []
+  }
+
 }
 
 const store = new TodoStore();

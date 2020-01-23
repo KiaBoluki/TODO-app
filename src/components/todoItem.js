@@ -40,12 +40,12 @@ class TodoItem extends Component {
           </label>
         </td>
         <td className="exit-btn">
-          <span
-            className="badge badge-pill badge-danger"
+          <i
+            className="fas fa-trash"
             onClick={() => this.removeTodoItem(todo.id)}
+            title ={'Delete ' + todo.title}
           >
-            x
-          </span>
+          </i>
         </td>
       </tr>
     );
