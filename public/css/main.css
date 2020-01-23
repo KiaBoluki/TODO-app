@@ -1,11 +1,12 @@
 .container {
   max-width: 500px;
   width: 95% !important;
-  box-shadow: 1px 1px 3px grey;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   margin-top: 45px;
   padding: 13px 15px;
   min-width: 350px;
   padding-bottom: 2px;
+  background-color: #fff;
 }
 
 input[type="checkbox"] {
@@ -76,7 +77,12 @@ table {
   padding: 0px 0px 0px 0px ;
   overflow: auto;
   border-top: 1px dashed #aaa;
+  z-index: 9999;
+  background-color: #fff;
+  margin : 0px 15px;
+
 }
+
 
 
 .filter-btns {
@@ -86,7 +92,7 @@ table {
 
 .header {
   overflow: visible;
-  padding: 10px;
+  padding: 10px 0px;
   margin: 0px;
 }
 
@@ -126,4 +132,26 @@ table {
   color: maroon;
   cursor: pointer;
   padding-right: 15px;
+}
+
+.wrapper{
+  position: relative;
+  margin:0 -15px;
+}
+
+.wrapper:after{
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+  left: 0;
+  top:0;
+	height: 48px;
+	overflow: hidden;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+	            0 8px 0 -3px #f6f6f6,
+	            0 9px 1px -3px rgba(0, 0, 0, 0.2),
+	            0 16px 0 -6px #f6f6f6,
+              0 17px 2px -6px rgba(0, 0, 0, 0.2);
+              z-index: -1;
 }

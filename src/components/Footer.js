@@ -8,10 +8,16 @@ import ClearButton from "./ClearButton"
 export default class Footer extends Component {
   render() {
     return (
-      <div className="footer">
-          
-          <FilterButtons />
-          <ClearButton />
+      
+      <div className="wrapper">
+        
+        <div className="footer">
+            
+            <FilterButtons />
+            <ClearButton />
+        </div>
+        <div className="echo-1"></div>
+        <div className="echo-2"></div>
       </div>
     );
   }

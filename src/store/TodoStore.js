@@ -39,6 +39,9 @@ class TodoStore {
   clearTodos(){
     //this.todos.splice(0,this.todos.length) // clear the array 
     this.todos = []
+    this.todosLength = 0
+    this.activeTodos = 0
+    this.completedTodos = 0
   }
 
 }
