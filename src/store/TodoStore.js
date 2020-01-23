@@ -3,8 +3,11 @@ import TodoModel from "./TodoModel";
 
 class TodoStore {
   @observable todos = [];
+  @observable activeTodos =0;
+  @observable completedTodos=0;
   @observable todosLength = 0;
   @observable listMode = 0 ;
+
 
   lastID = 0;
 
@@ -25,8 +28,11 @@ class TodoStore {
 
   @action
   countAllTodos() {
-    let c = this.todos.filter(com => !com.completed);
-    this.todosLength = c.length;
+    let a = this.todos.filter(com => !com.completed);
+    this.activeTodos = a.length;
+
+    this.completedTodos = this.todos.length - a.length;
+
   }
 
 }

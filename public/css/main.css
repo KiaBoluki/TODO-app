@@ -102,10 +102,15 @@ table{
   margin-left: 15px;
   padding: 3px 8px;
   font-size: 11px;
+  white-space: pre-line;
 }
 
 .table-hover tr:hover{
   background-color: #eee;
+}
+
+.filter-btns a.btn-secondary{
+  color:#eee;
 }
 
 

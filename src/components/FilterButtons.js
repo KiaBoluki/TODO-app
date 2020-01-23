@@ -4,34 +4,48 @@ import store from "../store/TodoStore";
 
 @observer
 export default class TodoItems extends Component {
-  filterCompleted(i){
+  filterCompleted(i) {
     i.preventDefault();
     store.listMode = i.target.id;
 
-    var buttons = Array.from(document.getElementsByClassName('btn'))
-    
-    buttons.map(button=>{
-      button.classList.remove('btn-secondary')
-      button.classList.add('btn-light')
+    var buttons = Array.from(document.getElementsByClassName("btn"));
 
-    })
-    
-    i.target.classList.remove('btn-light')
-    i.target.classList.add('btn-secondary')
+    buttons.map(button => {
+      button.classList.remove("btn-secondary");
+      button.classList.add("btn-light");
+    });
+
+    i.target.classList.remove("btn-light");
+    i.target.classList.add("btn-secondary");
   }
   render() {
     return (
-        <div className="filter-btns">
-            <a className="btn btn-secondary" id="0"
-            onClick = {event=>this.filterCompleted(event)}
-            >All</a>
-            <a className="btn btn-light" id="1"
-            onClick = {event=>this.filterCompleted(event)}
-            >Active</a>
-            <a className="btn btn-light" id="2"
-            onClick = {event=>this.filterCompleted(event)}
-            >Completed</a>
-        </div>
+      <div className="filter-btns">
+        <a
+          className="btn btn-secondary"
+          id="0"
+          onClick={event => this.filterCompleted(event)}
+        >
+          All
+          &nbsp;({store.todos.length})
+        </a>
+        <a
+          className="btn btn-light"
+          id="2"
+          onClick={event => this.filterCompleted(event)}
+        >
+          Active
+          &nbsp;({store.activeTodos})
+        </a>
+        <a
+          className="btn btn-light"
+          id="1"
+          onClick={event => this.filterCompleted(event)}
+        >
+          Completed
+          &nbsp;({store.completedTodos})
+        </a>
+      </div>
     );
   }
 }
