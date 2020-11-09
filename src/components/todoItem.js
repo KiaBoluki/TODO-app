@@ -23,10 +23,12 @@ class TodoItem extends Component {
 
     return (
       <tr>
-        <td>
-          <label className={
-          todo.completed ? this.state.comClass : this.state.notComClass
-        }>
+        <td className="desc">
+          <label
+            className={
+              todo.completed ? this.state.comClass : this.state.notComClass
+            }
+          >
             <input
               type="checkbox"
               name="task"
@@ -39,13 +41,18 @@ class TodoItem extends Component {
             <span className="checkmark" id="checkmark"></span>
           </label>
         </td>
+        <td className="time">
+          <div className="timeDiv">
+            <p>{new Date().toLocaleDateString()}</p>
+            <p>{new Date().toLocaleTimeString()}</p>
+          </div>
+        </td>
         <td className="exit-btn">
           <i
             className="fas fa-trash"
             onClick={() => this.removeTodoItem(todo.id)}
-            title ={'Delete ' + todo.title}
-          >
-          </i>
+            title={"Delete " + todo.title}
+          ></i>
         </td>
       </tr>
     );

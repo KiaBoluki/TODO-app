@@ -18,7 +18,8 @@ export default class TodoItems extends Component {
   }
   render() {
     return (
-      <table className="table table-hover">
+      <table className="table table-hover ">
+        
         {this.showList().map(todo => {
           return <TodoItem todo={todo} />;
         })}
